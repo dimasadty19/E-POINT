@@ -109,7 +109,8 @@ class SiswaController extends Controller
         return $siswas;
      }
 
-     public function edit(string $id){
+     public function edit(string $id):view
+     {
 
         $siswa = DB::table('siswas')
         ->join('users', 'siswas.id_user', '=', 'users.id')
